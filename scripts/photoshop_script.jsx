@@ -1,11 +1,10 @@
-// ExtendScript: Dinamik dosya işleme
+// ExtendScript: Photoshop işlemleri
 
 // 1. Parametreleri al
 var tiffFile = File(arguments[0]);  // Ana TIFF dosyası
 var imageFile = File(arguments[1]);  // İşlenecek resim dosyası
 var outputFolder = arguments[2];  // Çıktı klasörü
-var barcodeText1 = arguments[3];  // Barkod yazısı 1
-var barcodeText2 = arguments[4];  // Barkod yazısı 2
+var barcodeText = arguments[3];  // Barkod yazısı
 
 // 2. TIFF dosyasını aç ve bir kopyasını oluştur
 if (!tiffFile.exists) {
@@ -63,8 +62,9 @@ pastedLayer2.resize(((rect1CopyBounds[2] - rect1CopyBounds[0]) / pastedLayer2.bo
 pastedLayer2.translate(rect1CopyBounds[0] - pastedLayer2.bounds[0], rect1CopyBounds[1] - pastedLayer2.bounds[1]);
 alert("Resmin kopyası Rectangle 1 copy ile hizalandı.");
 
-// 6. Layer sıralamasını kontrol et ve düzenle
+// 6. Layer sıralamasını kontrol et ve düzelt
 try {
+    // Katman 1 ve Katman 1 kopya en alta taşınıyor
     pastedLayer1.move(doc.artLayers[doc.artLayers.length - 1], ElementPlacement.PLACEAFTER);
     pastedLayer2.move(doc.artLayers[doc.artLayers.length - 1], ElementPlacement.PLACEAFTER);
     alert("Katman sıralaması düzenlendi. Katman 1 ve Katman 1 kopya en alta taşındı.");
@@ -76,8 +76,8 @@ try {
 // 7. Barkod metinlerini güncelle
 try {
     var barcodeLayer1 = doc.artLayers.getByName("BARKOD");
-    barcodeLayer1.textItem.contents = barcodeText1;
-    alert("BARKOD metni güncellendi: " + barcodeText1);
+    barcodeLayer1.textItem.contents = barcodeText;
+    alert("BARKOD metni güncellendi: " + barcodeText);
 } catch (e) {
     alert("BARKOD katmanı bulunamadı: " + e.message);
     throw new Error("BARKOD katmanı bulunamadı.");
@@ -85,15 +85,14 @@ try {
 
 try {
     var barcodeLayer2 = doc.artLayers.getByName("BARKOD 2");
-    barcodeLayer2.textItem.contents = barcodeText2;
-    alert("BARKOD 2 metni güncellendi: " + barcodeText2);
+    barcodeLayer2.textItem.contents = barcodeText;
+    alert("BARKOD 2 metni güncellendi: " + barcodeText);
 } catch (e) {
     alert("BARKOD 2 katmanı bulunamadı: " + e.message);
     throw new Error("BARKOD 2 katmanı bulunamadı.");
 }
 
 // 8. Dosyaları kaydet
-// Dosya adını al
 var baseName = decodeURIComponent(imageFile.name).match(/([^\/]+)(?=\.\w+$)/)[0];
 
 // JPEG olarak kaydet
