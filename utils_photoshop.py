@@ -2,7 +2,7 @@ import os
 import subprocess
 
 
-def process_image_with_photoshop(tiff_file, image_file, output_folder, barcode_text1, barcode_text2):
+def process_image_with_photoshop(tiff_file, image_file, output_folder, barcode_text):
     """
     Photoshop işlemlerini ExtendScript ile gerçekleştiren fonksiyon.
     """
@@ -12,7 +12,7 @@ def process_image_with_photoshop(tiff_file, image_file, output_folder, barcode_t
     # AppleScript komutunu oluştur
     apple_script = f"""
         osascript -e 'tell application "Adobe Photoshop 2025"
-            do javascript file "{photoshop_script}" with arguments {{"{tiff_file}", "{image_file}", "{output_folder}", "{barcode_text1}", "{barcode_text2}"}}
+            do javascript file "{photoshop_script}" with arguments {{"{tiff_file}", "{image_file}", "{output_folder}", "{barcode_text}"}}
         end tell'
     """
 
