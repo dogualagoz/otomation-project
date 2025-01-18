@@ -12,10 +12,19 @@ if (!tiffFile.exists) {
     throw new Error("TIFF dosyası bulunamadı.");
 }
 
+// TIFF dosyasının kopyasını oluştur
 var tiffCopy = File(outputFolder + "/temp_copy.tif");
-tiffFile.copy(tiffCopy);
-var doc = app.open(tiffCopy);
-alert("TIFF dosyasının kopyası açıldı.");
+try {
+    tiffFile.copy(tiffCopy);
+    if (!tiffCopy.exists) {
+        throw new Error("TIFF dosyası kopyalanamadı.");
+    }
+    var doc = app.open(tiffCopy);
+    alert("TIFF dosyasının kopyası başarıyla açıldı.");
+} catch (e) {
+    alert("TIFF dosyasının kopyalanması veya açılması sırasında hata: " + e.message);
+    throw new Error("TIFF dosyasının işlenmesi sırasında hata oluştu.");
+}
 
 // 3. Resim dosyasını aç
 if (!imageFile.exists) {
@@ -75,21 +84,16 @@ try {
 
 // 7. Barkod metinlerini güncelle
 try {
-    var barcodeLayer1 = doc.artLayers.getByName("BARKOD");
-    barcodeLayer1.textItem.contents = barcodeText;
-    alert("BARKOD metni güncellendi: " + barcodeText);
+    var barcodeLayers = doc.artLayers;
+    for (var i = 0; i < barcodeLayers.length; i++) {
+        if (barcodeLayers[i].name.indexOf("BARKOD") !== -1) {
+            barcodeLayers[i].textItem.contents = barcodeText;
+        }
+    }
+    alert("Barkod metinleri güncellendi.");
 } catch (e) {
-    alert("BARKOD katmanı bulunamadı: " + e.message);
-    throw new Error("BARKOD katmanı bulunamadı.");
-}
-
-try {
-    var barcodeLayer2 = doc.artLayers.getByName("BARKOD 2");
-    barcodeLayer2.textItem.contents = barcodeText;
-    alert("BARKOD 2 metni güncellendi: " + barcodeText);
-} catch (e) {
-    alert("BARKOD 2 katmanı bulunamadı: " + e.message);
-    throw new Error("BARKOD 2 katmanı bulunamadı.");
+    alert("Barkod metinleri güncellenirken hata: " + e.message);
+    throw new Error("Barkod metinleri güncellenemedi.");
 }
 
 // 8. Dosyaları kaydet
