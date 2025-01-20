@@ -5,6 +5,7 @@ var tiffFile = File(arguments[0]);  // Ana TIFF dosyası
 var imageFile = File(arguments[1]);  // İşlenecek resim dosyası
 var outputFolder = arguments[2];  // Çıktı klasörü
 var barcodeText = arguments[3];  // Barkod yazısı
+var bedenType = arguments[4];    // Seçili beden tipi
 
 // 2. TIFF dosyasını aç ve bir kopyasını oluştur
 if (!tiffFile.exists) {
@@ -28,83 +29,69 @@ imageDoc.close(SaveOptions.DONOTSAVECHANGES);
 doc.paste();
 var pastedLayer1 = doc.activeLayer;
 
-// 4. Resmi Rectangle 1 ile hizala ve boyutlandır
-var rect1;
-try {
-    rect1 = doc.artLayers.getByName("Rectangle 1");
-} catch (e) {
-    throw new Error("Rectangle 1 katmanı bulunamadı: " + e.message);
-}
-var rect1Bounds = rect1.bounds;
-pastedLayer1.resize(((rect1Bounds[2] - rect1Bounds[0]) / pastedLayer1.bounds[2]) * 100, ((rect1Bounds[3] - rect1Bounds[1]) / pastedLayer1.bounds[3]) * 100);
-pastedLayer1.translate(rect1Bounds[0] - pastedLayer1.bounds[0], rect1Bounds[1] - pastedLayer1.bounds[1]);
+// İşlemler beden türüne göre ayrılıyor
+if (bedenType === "70 x 70") {
+    // İki rectangle kullan
+    var rect1 = doc.artLayers.getByName("Rectangle 1");
+    var rect1Copy = doc.artLayers.getByName("Rectangle 1 copy");
 
-// 5. Resmi kopyala ve Rectangle 1 Copy ile hizala
-var pastedLayer2 = pastedLayer1.duplicate();
-var rect1Copy;
-try {
-    rect1Copy = doc.artLayers.getByName("Rectangle 1 copy");
-} catch (e) {
-    throw new Error("Rectangle 1 copy katmanı bulunamadı: " + e.message);
-}
-var rect1CopyBounds = rect1Copy.bounds;
-pastedLayer2.resize(((rect1CopyBounds[2] - rect1CopyBounds[0]) / pastedLayer2.bounds[2]) * 100, ((rect1CopyBounds[3] - rect1CopyBounds[1]) / pastedLayer2.bounds[3]) * 100);
-pastedLayer2.translate(rect1CopyBounds[0] - pastedLayer2.bounds[0], rect1CopyBounds[1] - pastedLayer2.bounds[1]);
+    // Rectangle 1 için hizalama
+    pastedLayer1.resize(((rect1.bounds[2] - rect1.bounds[0]) / pastedLayer1.bounds[2]) * 100, 
+                        ((rect1.bounds[3] - rect1.bounds[1]) / pastedLayer1.bounds[3]) * 100);
+    pastedLayer1.translate(rect1.bounds[0] - pastedLayer1.bounds[0], 
+                           rect1.bounds[1] - pastedLayer1.bounds[1]);
 
-// 6. Layer sıralamasını kontrol et ve düzelt
-try {
+    // Rectangle 1 Copy için kopyalama ve hizalama
+    var pastedLayer2 = pastedLayer1.duplicate();
+    pastedLayer2.resize(((rect1Copy.bounds[2] - rect1Copy.bounds[0]) / pastedLayer2.bounds[2]) * 100, 
+                        ((rect1Copy.bounds[3] - rect1Copy.bounds[1]) / pastedLayer2.bounds[3]) * 100);
+    pastedLayer2.translate(rect1Copy.bounds[0] - pastedLayer2.bounds[0], 
+                           rect1Copy.bounds[1] - pastedLayer2.bounds[1]);
+
+    // Barkod güncelleme (10 adet)
+    for (var i = 1; i <= 10; i++) {
+        var barkodLayer = doc.artLayers.getByName("BARKOD " + i);
+        barkodLayer.textItem.contents = barcodeText;
+    }
+
+    // Katmanları en alta taşı
     pastedLayer1.move(doc.artLayers[doc.artLayers.length - 1], ElementPlacement.PLACEAFTER);
     pastedLayer2.move(doc.artLayers[doc.artLayers.length - 1], ElementPlacement.PLACEAFTER);
-} catch (e) {
-    throw new Error("Katman sıralaması yapılamadı: " + e.message);
+
+} else {
+    // Tek rectangle kullan
+    var rect1 = doc.artLayers.getByName("Rectangle 1");
+
+    // Rectangle 1 için hizalama
+    pastedLayer1.resize(((rect1.bounds[2] - rect1.bounds[0]) / pastedLayer1.bounds[2]) * 100, 
+                        ((rect1.bounds[3] - rect1.bounds[1]) / pastedLayer1.bounds[3]) * 100);
+    pastedLayer1.translate(rect1.bounds[0] - pastedLayer1.bounds[0], 
+                           rect1.bounds[1] - pastedLayer1.bounds[1]);
+
+    // Barkod güncelleme (4 adet)
+    for (var i = 1; i <= 4; i++) {
+        var barkodLayer = doc.artLayers.getByName("BARKOD " + i);
+        barkodLayer.textItem.contents = barcodeText;
+    }
+
+    // Katmanı en alta taşı
+    pastedLayer1.move(doc.artLayers[doc.artLayers.length - 1], ElementPlacement.PLACEAFTER);
 }
 
-// 7. Barkod metinlerini güncelle
-try {
-    var barcodeLayers = [];
-    for (var i = 1; i <= 10; i++) {
-        try {
-            var layerName = "BARKOD " + i;
-            var barcodeLayer = doc.artLayers.getByName(layerName);
-            barcodeLayer.textItem.contents = barcodeText;
-            barcodeLayers.push(barcodeLayer);
-        } catch (e) {
-            // Eğer katman yoksa devam et
-        }
-    }
-    if (barcodeLayers.length === 0) {
-        throw new Error("Hiçbir BARKOD katmanı bulunamadı.");
-    }
-} catch (e) {
-    throw new Error("Barkod metinleri güncellenirken hata oluştu: " + e.message);
-}
-
-// 8. Dosyaları kaydet
+// 4. Dosyaları kaydet
 var baseName = decodeURIComponent(imageFile.name).match(/([^\/]+)(?=\.\w+$)/)[0];
 
 // JPEG olarak kaydet
 var jpegSaveFile = File(outputFolder + "/" + baseName + "_result.jpg");
 var jpegOptions = new JPEGSaveOptions();
 jpegOptions.quality = 12;
-try {
-    doc.saveAs(jpegSaveFile, jpegOptions, true);
-} catch (e) {
-    throw new Error("JPEG kaydetme sırasında hata: " + e.message);
-}
+doc.saveAs(jpegSaveFile, jpegOptions, true);
 
 // TIFF olarak kaydet
 var tiffSaveFile = File(outputFolder + "/" + baseName + "_result.tif");
 var tiffOptions = new TiffSaveOptions();
 tiffOptions.layers = true;
-try {
-    doc.saveAs(tiffSaveFile, tiffOptions, true);
-} catch (e) {
-    throw new Error("TIFF kaydetme sırasında hata: " + e.message);
-}
+doc.saveAs(tiffSaveFile, tiffOptions, true);
 
-// 9. TIFF dosyasını kapat
-try {
-    doc.close(SaveOptions.DONOTSAVECHANGES);
-} catch (e) {
-    throw new Error("TIFF dosyasını kapatırken hata: " + e.message);
-}
+// TIFF dosyasını kapat
+doc.close(SaveOptions.DONOTSAVECHANGES);
