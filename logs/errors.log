@@ -1,0 +1,333 @@
+2025-01-20 15:29:54,266 - INFO - AMBER.jpg işleniyor...
+2025-01-20 15:30:01,377 - INFO - /Users/dogualagoz/Desktop/input/design/AMBER.jpg başarıyla işlendi.
+2025-01-20 15:30:01,421 - INFO - AMBER.jpg tamamlandı.
+2025-01-20 15:30:01,665 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bilgisi bulunamadı.
+2025-01-20 15:30:01,666 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bilgisi bulunamadı.
+2025-01-20 15:30:01,668 - INFO - Tüm dosyalar başarıyla işlendi. Toplam süre: 7.40 saniye.
+2025-01-20 15:34:11,247 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/7070.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00648"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 15:34:25,030 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/7070.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00648"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 15:42:03,099 - INFO - AMBER.jpg işleniyor...
+2025-01-20 15:42:03,487 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/7070.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00648"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 15:42:03,488 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 15:42:03,507 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 15:42:03,522 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 15:42:03,522 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 0.61 saniye.
+2025-01-20 15:46:22,602 - INFO - AMBER.jpg işleniyor...
+2025-01-20 15:46:22,602 - ERROR - TIFF dosyası bulunamadı: /Users/dogualagoz/Desktop/input/design/7070.tif
+2025-01-20 15:46:34,603 - ERROR - HATA: TIFF dosyası bulunamadı: /Users/dogualagoz/Desktop/input/design/7070.tif
+2025-01-20 15:50:26,069 - INFO - AMBER.jpg işleniyor...
+2025-01-20 15:50:34,149 - INFO - /Users/dogualagoz/Desktop/input/design/AMBER.jpg başarıyla işlendi.
+2025-01-20 15:50:34,172 - INFO - AMBER.jpg tamamlandı.
+2025-01-20 15:50:34,317 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 15:50:34,326 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 15:50:34,327 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 8.28 saniye.
+2025-01-20 15:51:20,903 - INFO - AMBER.jpg işleniyor...
+2025-01-20 15:51:30,482 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00650"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 15:51:30,490 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 15:51:30,615 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 15:51:30,625 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 15:51:30,626 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 9.74 saniye.
+2025-01-20 15:52:36,602 - INFO - AMBER.jpg işleniyor...
+2025-01-20 15:52:41,450 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00650"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 15:52:41,454 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 15:52:41,511 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 15:52:41,522 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 15:52:41,522 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 4.93 saniye.
+2025-01-20 16:03:33,514 - INFO - AMBER.jpg işleniyor...
+2025-01-20 16:03:33,822 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00649"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 16:03:33,823 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 16:03:33,857 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 16:03:33,868 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 16:03:33,868 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 0.37 saniye.
+2025-01-20 16:04:31,327 - INFO - AMBER.jpg işleniyor...
+2025-01-20 16:04:31,583 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/70X70.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00648"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 16:04:31,583 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 16:04:31,620 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 16:04:31,631 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 16:04:31,631 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 0.32 saniye.
+2025-01-20 19:18:41,389 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:18:41,820 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/70X70.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00648"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 19:18:41,821 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 19:18:41,865 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 19:18:41,875 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 19:18:41,876 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 0.50 saniye.
+2025-01-20 19:22:51,468 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:22:51,468 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/70X70.tif
+2025-01-20 19:22:51,468 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:22:51,468 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:22:51,468 - INFO - Barcode Text: MDH00648
+2025-01-20 19:22:51,468 - INFO - Beden Type: 70 x 70
+2025-01-20 19:22:51,468 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/70X70.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00648", "70 x 70"}
+        end tell'
+    
+2025-01-20 19:23:00,776 - INFO - /Users/dogualagoz/Desktop/input/design/AMBER.jpg başarıyla işlendi.
+2025-01-20 19:23:00,791 - INFO - AMBER.jpg tamamlandı.
+2025-01-20 19:23:01,014 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 19:23:01,023 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 19:23:01,023 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 9.56 saniye.
+2025-01-20 19:23:15,377 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:23:15,378 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/135X135.tif
+2025-01-20 19:23:15,378 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:23:15,378 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:23:15,378 - INFO - Barcode Text: MDH00649
+2025-01-20 19:23:15,378 - INFO - Beden Type: 135 x 135
+2025-01-20 19:23:15,378 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00649", "135 x 135"}
+        end tell'
+    
+2025-01-20 19:23:21,885 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00649", "135 x 135"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 19:23:21,888 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 19:23:21,954 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 19:23:21,963 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 19:23:21,963 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 6.60 saniye.
+2025-01-20 19:24:02,448 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:24:02,449 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/150X150.tif
+2025-01-20 19:24:02,449 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:24:02,449 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:24:02,449 - INFO - Barcode Text: MDH00650
+2025-01-20 19:24:02,449 - INFO - Beden Type: 150 x 150
+2025-01-20 19:24:02,449 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00650", "150 x 150"}
+        end tell'
+    
+2025-01-20 19:24:07,613 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00650", "150 x 150"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 19:24:07,623 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 19:24:07,725 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 19:24:07,737 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 19:24:07,738 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 5.30 saniye.
+2025-01-20 19:31:02,357 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:31:02,360 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/70X70.tif
+2025-01-20 19:31:02,360 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:31:02,360 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:31:02,360 - INFO - Barcode Text: MDH00648
+2025-01-20 19:31:02,360 - INFO - Beden Type: 70 x 70
+2025-01-20 19:31:02,360 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/70X70.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00648", "70 x 70"}
+        end tell'
+    
+2025-01-20 19:31:07,779 - INFO - /Users/dogualagoz/Desktop/input/design/AMBER.jpg başarıyla işlendi.
+2025-01-20 19:31:07,781 - INFO - AMBER.jpg tamamlandı.
+2025-01-20 19:31:07,838 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 19:31:07,846 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 19:31:07,846 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 5.50 saniye.
+2025-01-20 19:31:29,074 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:31:29,075 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/135X135.tif
+2025-01-20 19:31:29,075 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:31:29,075 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:31:29,075 - INFO - Barcode Text: MDH00649
+2025-01-20 19:31:29,075 - INFO - Beden Type: 135 x 135
+2025-01-20 19:31:29,075 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00649", "135 x 135"}
+        end tell'
+    
+2025-01-20 19:31:33,834 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00649", "135 x 135"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 19:31:33,840 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 19:31:33,895 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 19:31:33,903 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 19:31:33,903 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 4.85 saniye.
+2025-01-20 19:32:33,823 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:32:33,824 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/150X150.tif
+2025-01-20 19:32:33,824 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:32:33,824 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:32:33,824 - INFO - Barcode Text: MDH00650
+2025-01-20 19:32:33,824 - INFO - Beden Type: 150 x 150
+2025-01-20 19:32:33,824 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00650", "150 x 150"}
+        end tell'
+    
+2025-01-20 19:32:45,127 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00650", "150 x 150"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 19:32:45,150 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 19:32:45,322 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:32:45,323 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/150X150.tif
+2025-01-20 19:32:45,323 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:32:45,323 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:32:45,323 - INFO - Barcode Text: MDH00650
+2025-01-20 19:32:45,323 - INFO - Beden Type: 150 x 150
+2025-01-20 19:32:45,323 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00650", "150 x 150"}
+        end tell'
+    
+2025-01-20 19:33:07,835 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00650", "150 x 150"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 19:33:07,880 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 19:33:08,132 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 19:33:08,145 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 19:33:08,145 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 22.85 saniye.
+2025-01-20 19:33:08,191 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 19:33:08,206 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 19:33:08,206 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 34.40 saniye.
+2025-01-20 19:40:14,860 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:40:14,861 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/135X135.tif
+2025-01-20 19:40:14,861 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:40:14,861 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:40:14,861 - INFO - Barcode Text: MDH00649
+2025-01-20 19:40:14,861 - INFO - Beden Type: 135 x 135
+2025-01-20 19:40:14,861 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00649", "135 x 135"}
+        end tell'
+    
+2025-01-20 19:40:24,641 - ERROR - /Users/dogualagoz/Desktop/input/design/AMBER.jpg işlenirken hata oluştu: Command '
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00649", "135 x 135"}
+        end tell'
+    ' returned non-zero exit status 1.
+2025-01-20 19:40:24,655 - ERROR - AMBER.jpg işlenirken hata oluştu.
+2025-01-20 19:40:24,761 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 19:40:24,770 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 19:40:24,770 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 9.93 saniye.
+2025-01-20 19:41:10,043 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:41:10,044 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/150X150.tif
+2025-01-20 19:41:10,044 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:41:10,044 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:41:10,044 - INFO - Barcode Text: MDH00650
+2025-01-20 19:41:10,044 - INFO - Beden Type: 150 x 150
+2025-01-20 19:41:10,044 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00650", "150 x 150"}
+        end tell'
+    
+2025-01-20 19:41:18,875 - INFO - /Users/dogualagoz/Desktop/input/design/AMBER.jpg başarıyla işlendi.
+2025-01-20 19:41:18,910 - INFO - AMBER.jpg tamamlandı.
+2025-01-20 19:41:19,154 - ERROR - EVEN.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: EVEN.jpg
+2025-01-20 19:41:19,163 - ERROR - FLORIDA.jpg için barkod alınırken hata oluştu: Barkod bulunamadı: FLORIDA.jpg
+2025-01-20 19:41:19,163 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 9.14 saniye.
+2025-01-20 19:47:25,682 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:47:25,685 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/135X135.tif
+2025-01-20 19:47:25,685 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:47:25,685 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:47:25,685 - INFO - Barcode Text: MDH00649
+2025-01-20 19:47:25,685 - INFO - Beden Type: 135 x 135
+2025-01-20 19:47:25,685 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00649", "135 x 135"}
+        end tell'
+    
+2025-01-20 19:47:37,029 - INFO - /Users/dogualagoz/Desktop/input/design/AMBER.jpg başarıyla işlendi.
+2025-01-20 19:47:37,085 - INFO - AMBER.jpg tamamlandı.
+2025-01-20 19:47:37,270 - INFO - AURORA.jpg işleniyor...
+2025-01-20 19:47:37,270 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/135X135.tif
+2025-01-20 19:47:37,270 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AURORA.jpg
+2025-01-20 19:47:37,270 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:47:37,270 - INFO - Barcode Text: MDH00655
+2025-01-20 19:47:37,270 - INFO - Beden Type: 135 x 135
+2025-01-20 19:47:37,270 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AURORA.jpg", "/Users/dogualagoz/Desktop/output", "MDH00655", "135 x 135"}
+        end tell'
+    
+2025-01-20 19:47:43,257 - INFO - /Users/dogualagoz/Desktop/input/design/AURORA.jpg başarıyla işlendi.
+2025-01-20 19:47:43,289 - INFO - AURORA.jpg tamamlandı.
+2025-01-20 19:47:43,487 - INFO - BLOOM.jpg işleniyor...
+2025-01-20 19:47:43,487 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/135X135.tif
+2025-01-20 19:47:43,487 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/BLOOM.jpg
+2025-01-20 19:47:43,487 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:47:43,487 - INFO - Barcode Text: MDH00658
+2025-01-20 19:47:43,487 - INFO - Beden Type: 135 x 135
+2025-01-20 19:47:43,487 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/BLOOM.jpg", "/Users/dogualagoz/Desktop/output", "MDH00658", "135 x 135"}
+        end tell'
+    
+2025-01-20 19:47:56,791 - INFO - /Users/dogualagoz/Desktop/input/design/BLOOM.jpg başarıyla işlendi.
+2025-01-20 19:47:56,853 - INFO - BLOOM.jpg tamamlandı.
+2025-01-20 19:47:56,934 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 31.26 saniye.
+2025-01-20 19:51:41,549 - INFO - AMBER.jpg işleniyor...
+2025-01-20 19:51:41,551 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/150X150.tif
+2025-01-20 19:51:41,551 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-20 19:51:41,551 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:51:41,551 - INFO - Barcode Text: MDH00650
+2025-01-20 19:51:41,551 - INFO - Beden Type: 150 x 150
+2025-01-20 19:51:41,551 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00650", "150 x 150"}
+        end tell'
+    
+2025-01-20 19:51:55,214 - INFO - /Users/dogualagoz/Desktop/input/design/AMBER.jpg başarıyla işlendi.
+2025-01-20 19:51:55,241 - INFO - AMBER.jpg tamamlandı.
+2025-01-20 19:51:55,483 - INFO - AURORA.jpg işleniyor...
+2025-01-20 19:51:55,483 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/150X150.tif
+2025-01-20 19:51:55,483 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AURORA.jpg
+2025-01-20 19:51:55,483 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:51:55,483 - INFO - Barcode Text: MDH00656
+2025-01-20 19:51:55,483 - INFO - Beden Type: 150 x 150
+2025-01-20 19:51:55,483 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/AURORA.jpg", "/Users/dogualagoz/Desktop/output", "MDH00656", "150 x 150"}
+        end tell'
+    
+2025-01-20 19:52:13,857 - INFO - /Users/dogualagoz/Desktop/input/design/AURORA.jpg başarıyla işlendi.
+2025-01-20 19:52:13,883 - INFO - AURORA.jpg tamamlandı.
+2025-01-20 19:52:14,078 - INFO - BLOOM.jpg işleniyor...
+2025-01-20 19:52:14,079 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/150X150.tif
+2025-01-20 19:52:14,079 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/BLOOM.jpg
+2025-01-20 19:52:14,079 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-20 19:52:14,079 - INFO - Barcode Text: MDH00659
+2025-01-20 19:52:14,079 - INFO - Beden Type: 150 x 150
+2025-01-20 19:52:14,079 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/Users/dogualagoz/Desktop/otomation-project/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/150X150.tif", "/Users/dogualagoz/Desktop/input/design/BLOOM.jpg", "/Users/dogualagoz/Desktop/output", "MDH00659", "150 x 150"}
+        end tell'
+    
+2025-01-20 19:52:27,383 - INFO - /Users/dogualagoz/Desktop/input/design/BLOOM.jpg başarıyla işlendi.
+2025-01-20 19:52:27,435 - INFO - BLOOM.jpg tamamlandı.
+2025-01-20 19:52:27,521 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 45.99 saniye.
