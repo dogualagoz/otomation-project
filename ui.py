@@ -101,6 +101,9 @@ class AutomationApp(tk.Tk):
             df = pd.read_excel(excel_path)
             df.columns = df.columns.str.strip()
 
+            # Sadece "Beden" sütununda "70 x 70" olanları filtrele
+            df_filtered = df[df["Beden"] == "70 x 70"]
+
             # Girdi klasöründeki tüm JPG dosyalarını al
             images = [f for f in os.listdir(input_folder) if f.endswith(".jpg")]
 
@@ -116,10 +119,17 @@ class AutomationApp(tk.Tk):
 
             for index, image in enumerate(images, start=1):
                 image_file = os.path.join(input_folder, image)
-                base_name = os.path.splitext(image)[0]
 
                 # Barkod bilgisi al
-                barcode_text = df.loc[df["desen"] == image, "barkod"].values[0]
+                try:
+                    barcode_row = df_filtered[df_filtered["Desen"] == image]
+                    if not barcode_row.empty:
+                        barcode_text = barcode_row["Barkod"].values[0]
+                    else:
+                        raise ValueError("Barkod bilgisi bulunamadı.")
+                except Exception as e:
+                    self.log_progress(f"{image} için barkod alınırken hata oluştu: {e}", is_error=True)
+                    continue
 
                 self.log_progress(f"{image} işleniyor...")
 
