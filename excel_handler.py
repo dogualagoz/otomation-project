@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def get_barcode_from_excel(excel_path, selected_beden, image_name):
     """
     Excel dosyasından barkod bilgisini getirir.
