@@ -331,3 +331,83 @@
 2025-01-20 19:52:27,383 - INFO - /Users/dogualagoz/Desktop/input/design/BLOOM.jpg başarıyla işlendi.
 2025-01-20 19:52:27,435 - INFO - BLOOM.jpg tamamlandı.
 2025-01-20 19:52:27,521 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 45.99 saniye.
+2025-01-21 02:22:59,332 - INFO - AMBER.jpg işleniyor...
+2025-01-21 02:22:59,333 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/135X135.tif
+2025-01-21 02:22:59,333 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-21 02:22:59,333 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-21 02:22:59,333 - INFO - Barcode Text: MDH00649
+2025-01-21 02:22:59,333 - INFO - Beden Type: 135 x 135
+2025-01-21 02:22:59,333 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/var/folders/d1/vbb45t9x65bbxgb22_4wttfh0000gn/T/_MEIgPQ1we/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00649", "135 x 135"}
+        end tell'
+    
+2025-01-21 02:23:23,324 - INFO - /Users/dogualagoz/Desktop/input/design/AMBER.jpg başarıyla işlendi.
+2025-01-21 02:23:23,362 - INFO - AMBER.jpg tamamlandı.
+2025-01-21 02:23:23,561 - INFO - AURORA.jpg işleniyor...
+2025-01-21 02:23:23,561 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/135X135.tif
+2025-01-21 02:23:23,561 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AURORA.jpg
+2025-01-21 02:23:23,561 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-21 02:23:23,561 - INFO - Barcode Text: MDH00655
+2025-01-21 02:23:23,561 - INFO - Beden Type: 135 x 135
+2025-01-21 02:23:23,561 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/var/folders/d1/vbb45t9x65bbxgb22_4wttfh0000gn/T/_MEIgPQ1we/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/AURORA.jpg", "/Users/dogualagoz/Desktop/output", "MDH00655", "135 x 135"}
+        end tell'
+    
+2025-01-21 02:23:54,580 - INFO - /Users/dogualagoz/Desktop/input/design/AURORA.jpg başarıyla işlendi.
+2025-01-21 02:23:54,633 - INFO - AURORA.jpg tamamlandı.
+2025-01-21 02:23:54,865 - INFO - BLOOM.jpg işleniyor...
+2025-01-21 02:23:54,866 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/135X135.tif
+2025-01-21 02:23:54,866 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/BLOOM.jpg
+2025-01-21 02:23:54,866 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-21 02:23:54,866 - INFO - Barcode Text: MDH00658
+2025-01-21 02:23:54,866 - INFO - Beden Type: 135 x 135
+2025-01-21 02:23:54,866 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/var/folders/d1/vbb45t9x65bbxgb22_4wttfh0000gn/T/_MEIgPQ1we/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/135X135.tif", "/Users/dogualagoz/Desktop/input/design/BLOOM.jpg", "/Users/dogualagoz/Desktop/output", "MDH00658", "135 x 135"}
+        end tell'
+    
+2025-01-21 02:24:20,931 - INFO - /Users/dogualagoz/Desktop/input/design/BLOOM.jpg başarıyla işlendi.
+2025-01-21 02:24:20,969 - INFO - BLOOM.jpg tamamlandı.
+2025-01-21 02:24:21,055 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 81.75 saniye.
+2025-01-21 22:22:47,628 - INFO - AMBER.jpg işleniyor...
+2025-01-21 22:22:47,629 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/70X70.tif
+2025-01-21 22:22:47,629 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AMBER.jpg
+2025-01-21 22:22:47,629 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-21 22:22:47,629 - INFO - Barcode Text: MDH00648
+2025-01-21 22:22:47,629 - INFO - Beden Type: 70 x 70
+2025-01-21 22:22:47,629 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/var/folders/d1/vbb45t9x65bbxgb22_4wttfh0000gn/T/_MEIwfpNvN/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/70X70.tif", "/Users/dogualagoz/Desktop/input/design/AMBER.jpg", "/Users/dogualagoz/Desktop/output", "MDH00648", "70 x 70"}
+        end tell'
+    
+2025-01-21 22:23:08,478 - INFO - /Users/dogualagoz/Desktop/input/design/AMBER.jpg başarıyla işlendi.
+2025-01-21 22:23:08,493 - INFO - AMBER.jpg tamamlandı.
+2025-01-21 22:23:08,623 - INFO - AURORA.jpg işleniyor...
+2025-01-21 22:23:08,623 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/70X70.tif
+2025-01-21 22:23:08,623 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/AURORA.jpg
+2025-01-21 22:23:08,623 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-21 22:23:08,623 - INFO - Barcode Text: MDH00654
+2025-01-21 22:23:08,623 - INFO - Beden Type: 70 x 70
+2025-01-21 22:23:08,623 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/var/folders/d1/vbb45t9x65bbxgb22_4wttfh0000gn/T/_MEIwfpNvN/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/70X70.tif", "/Users/dogualagoz/Desktop/input/design/AURORA.jpg", "/Users/dogualagoz/Desktop/output", "MDH00654", "70 x 70"}
+        end tell'
+    
+2025-01-21 22:23:21,806 - INFO - /Users/dogualagoz/Desktop/input/design/AURORA.jpg başarıyla işlendi.
+2025-01-21 22:23:21,845 - INFO - AURORA.jpg tamamlandı.
+2025-01-21 22:23:22,002 - INFO - BLOOM.jpg işleniyor...
+2025-01-21 22:23:22,002 - INFO - Tiff File: /Users/dogualagoz/Desktop/input/design/70X70.tif
+2025-01-21 22:23:22,002 - INFO - Image File: /Users/dogualagoz/Desktop/input/design/BLOOM.jpg
+2025-01-21 22:23:22,002 - INFO - Output Folder: /Users/dogualagoz/Desktop/output
+2025-01-21 22:23:22,002 - INFO - Barcode Text: MDH00657
+2025-01-21 22:23:22,002 - INFO - Beden Type: 70 x 70
+2025-01-21 22:23:22,003 - INFO - AppleScript Command: 
+        osascript -e 'tell application "Adobe Photoshop 2025"
+            do javascript file "/var/folders/d1/vbb45t9x65bbxgb22_4wttfh0000gn/T/_MEIwfpNvN/scripts/photoshop_script.jsx" with arguments {"/Users/dogualagoz/Desktop/input/design/70X70.tif", "/Users/dogualagoz/Desktop/input/design/BLOOM.jpg", "/Users/dogualagoz/Desktop/output", "MDH00657", "70 x 70"}
+        end tell'
+    
+2025-01-21 22:23:33,514 - INFO - /Users/dogualagoz/Desktop/input/design/BLOOM.jpg başarıyla işlendi.
+2025-01-21 22:23:33,554 - INFO - BLOOM.jpg tamamlandı.
+2025-01-21 22:23:33,601 - INFO - Tüm dosyalar başarıyla işlendi! Toplam süre: 45.99 saniye.

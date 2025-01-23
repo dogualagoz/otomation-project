@@ -5,14 +5,6 @@ from utils_photoshop import process_image_with_photoshop
 from excel_handler import get_barcode_from_excel
 import pandas as pd
 import time
-import logging
-
-# Loglama ayarları
-logging.basicConfig(
-    filename=os.path.join(os.getcwd(), "logs", "errors.log"),
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-)
 
 class AutomationApp(tk.Tk):
     def __init__(self):
@@ -103,10 +95,8 @@ class AutomationApp(tk.Tk):
         self.progress_text.config(state="normal")
         if is_error:
             self.progress_text.insert("end", f"ERROR: {message}\n")
-            logging.error(message)  # Hataları logla
         else:
             self.progress_text.insert("end", f"{message}\n")
-            logging.info(message)  # Başarı mesajlarını logla
         self.progress_text.see("end")
         self.progress_text.config(state="disabled")
 
