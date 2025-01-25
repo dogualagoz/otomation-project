@@ -82,16 +82,12 @@ if (bedenType === "70 x 70") {
 var baseName = decodeURIComponent(imageFile.name).match(/([^\/]+)(?=\.\w+$)/)[0];
 
 // JPEG olarak kaydet
-var jpegSaveFile = File(outputFolder + "/" + baseName + "_result.jpg");
+var jpegSaveFile = File(outputFolder + "/" + barcodeText + ".jpg");
 var jpegOptions = new JPEGSaveOptions();
 jpegOptions.quality = 12;
 doc.saveAs(jpegSaveFile, jpegOptions, true);
 
-// TIFF olarak kaydet
-var tiffSaveFile = File(outputFolder + "/" + baseName + "_result.tif");
-var tiffOptions = new TiffSaveOptions();
-tiffOptions.layers = true;
-doc.saveAs(tiffSaveFile, tiffOptions, true);
+
 
 // TIFF dosyasını kapat
 doc.close(SaveOptions.DONOTSAVECHANGES);
