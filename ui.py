@@ -9,7 +9,7 @@ import time
 class AutomationApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Photoshop Otomasyon Aracı")
+        self.title("Photoshop Automation Tool")
         self.geometry("800x600")
         self.configure(padx=20, pady=20)
 
@@ -20,43 +20,49 @@ class AutomationApp(tk.Tk):
         self.beden_var = tk.StringVar()
 
         # Başlık
-        title_label = tk.Label(self, text="Photoshop Otomasyon Aracı", font=("Arial", 20, "bold"))
+        title_label = tk.Label(self, text="Photoshop Automation Tool", font=("Arial", 20, "bold"))
         title_label.pack(pady=10)
 
         # Girdi klasörü seçimi
         input_frame = tk.Frame(self)
         input_frame.pack(fill="x", pady=5)
-        tk.Label(input_frame, text="Girdi Klasörü:").pack(side="left", padx=5)
+        tk.Label(input_frame, text="Input Folder:").pack(side="left", padx=5)
         tk.Entry(input_frame, textvariable=self.input_folder, width=50).pack(side="left", padx=5)
-        tk.Button(input_frame, text="Gözat", command=self.select_input_folder).pack(side="left", padx=5)
+        tk.Button(input_frame, text="Browse", command=self.select_input_folder).pack(side="left", padx=5)
 
         # Çıktı klasörü seçimi
         output_frame = tk.Frame(self)
         output_frame.pack(fill="x", pady=5)
-        tk.Label(output_frame, text="Çıktı Klasörü:").pack(side="left", padx=5)
+        tk.Label(output_frame, text="Output Folder:").pack(side="left", padx=5)
         tk.Entry(output_frame, textvariable=self.output_folder, width=50).pack(side="left", padx=5)
-        tk.Button(output_frame, text="Gözat", command=self.select_output_folder).pack(side="left", padx=5)
+        tk.Button(output_frame, text="Browse", command=self.select_output_folder).pack(side="left", padx=5)
 
         # Excel dosyası seçimi
         excel_frame = tk.Frame(self)
         excel_frame.pack(fill="x", pady=5)
-        tk.Label(excel_frame, text="Barkod Tablosu:").pack(side="left", padx=5)
+        tk.Label(excel_frame, text="Barcodes Excel file:").pack(side="left", padx=5)
         tk.Entry(excel_frame, textvariable=self.excel_path, width=50).pack(side="left", padx=5)
-        tk.Button(excel_frame, text="Gözat", command=self.select_excel_file).pack(side="left", padx=5)
+        tk.Button(excel_frame, text="Browse", command=self.select_excel_file).pack(side="left", padx=5)
 
-        # Beden seçimi dropdown
+        # Beden seçimi dropdown (GÜNCELLENDİ: Yeni bedenler eklendi)
         beden_frame = tk.Frame(self)
         beden_frame.pack(fill="x", pady=5)
-        tk.Label(beden_frame, text="İşlenecek Beden:").pack(side="left", padx=5)
-        beden_dropdown = tk.OptionMenu(beden_frame, self.beden_var, "70 x 70", "135 x 135", "150 x 150")
+        tk.Label(beden_frame, text="Processed size:").pack(side="left", padx=5)
+
+        beden_options = [
+            "70 x 70", "135 x 135", "150 x 150",
+            "150 x 170", "150 x 200", "150 x 220", "150 x 250", "150 x 270"
+        ]
+
+        beden_dropdown = tk.OptionMenu(beden_frame, self.beden_var, *beden_options)
         beden_dropdown.pack(side="left", padx=5)
 
         # Tahmini süre
-        self.estimate_label = tk.Label(self, text="Tahmini süre: -- dk", font=("Arial", 14))
+        self.estimate_label = tk.Label(self, text="Estimated Time: -- min", font=("Arial", 14))
         self.estimate_label.pack(pady=10)
 
         # Çalıştırma butonu
-        run_button = tk.Button(self, text="Çalıştır", command=self.run_processing, state="disabled")
+        run_button = tk.Button(self, text="Run", command=self.run_processing, state="disabled")
         run_button.pack(pady=20)
         self.run_button = run_button
 
@@ -71,17 +77,17 @@ class AutomationApp(tk.Tk):
         self.beden_var.trace_add("write", self.check_ready)
 
     def select_input_folder(self):
-        folder = filedialog.askdirectory(title="Girdi Klasörünü Seçin")
+        folder = filedialog.askdirectory(title="Select Input Folder")
         if folder:
             self.input_folder.set(folder)
 
     def select_output_folder(self):
-        folder = filedialog.askdirectory(title="Çıktı Klasörünü Seçin")
+        folder = filedialog.askdirectory(title="Select Output Folder")
         if folder:
             self.output_folder.set(folder)
 
     def select_excel_file(self):
-        file = filedialog.askopenfilename(title="Barkod Tablosunu Seçin", filetypes=[("Excel Dosyaları", "*.xlsx")])
+        file = filedialog.askopenfilename(title="Select Barcodes Excel File", filetypes=[("Excel Files", "*.xlsx")])
         if file:
             self.excel_path.set(file)
 
@@ -119,7 +125,12 @@ class AutomationApp(tk.Tk):
             tiff_file_map = {
                 "70 x 70": "70X70.tif",
                 "135 x 135": "135X135.tif",
-                "150 x 150": "150X150.tif"
+                "150 x 150": "150X150.tif",
+                "150 x 170": "150X170.tif",
+                "150 x 200": "150X200.tif",
+                "150 x 220": "150X220.tif",
+                "150 x 250": "150X250.tif",
+                "150 x 270": "150X270.tif"
             }
 
             if selected_beden not in tiff_file_map:
@@ -131,7 +142,7 @@ class AutomationApp(tk.Tk):
                 messagebox.showerror("Hata", f"TIFF dosyası bulunamadı: {tiff_file}")
                 return
 
-            estimated_time = len(images) * 8
+            estimated_time = len(images) * 10
             self.estimate_label.config(text=f"İşleniyor... Tahmini süre: {estimated_time // 60} dk {estimated_time % 60} sn")
 
             start_time = time.time()
