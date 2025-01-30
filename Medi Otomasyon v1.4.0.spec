@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='Medi Otomasyon v1.2.0',
+    name='Medi Otomasyon v1.4.0',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -38,7 +38,7 @@ exe = EXE(
 )
 app = BUNDLE(
     exe,
-    name='Medi Otomasyon v1.2.0.app',
+    name='Medi Otomasyon v1.4.0.app',
     icon=None,
     bundle_identifier=None,
 )
