@@ -21,15 +21,12 @@ if (!imageFile.exists) {
     throw new Error("Resim dosyası bulunamadı: " + imageFile.fsName);
 }
 var imageDoc = app.open(imageFile);
-
-// Resmi TIFF dosyasına kopyala ve kapat
 imageDoc.selection.selectAll();
 imageDoc.selection.copy();
 imageDoc.close(SaveOptions.DONOTSAVECHANGES);
 doc.paste();
-var pastedLayer1 = doc.activeLayer; // Yapıştırılan resim katmanı
+var pastedLayer1 = doc.activeLayer;
 
-// İşlemler beden türüne göre ayrılıyor
 if (bedenType === "70 x 70") {
     var rect1 = doc.artLayers.getByName("Rectangle 1");
     var rect1Copy = doc.artLayers.getByName("Rectangle 1 copy");
@@ -43,106 +40,76 @@ if (bedenType === "70 x 70") {
     var centerY = (rect1.bounds[1] + rect1.bounds[3]) / 2 - (pastedLayer1.bounds[1] + pastedLayer1.bounds[3]) / 2;
     pastedLayer1.translate(centerX, centerY);
 
-    // 3️⃣ Yukarı ve aşağı taşan kısımları kırp
+    // 3️⃣ Taşan kısmı kırp
     try {
         var cropBounds = doc.artBounds;
-        if (cropBounds && cropBounds.length === 4) {
+        if (cropBounds.length === 4) {
             doc.crop([0, cropBounds[1], doc.width, cropBounds[3]]);
         }
-    } catch (e) {
-        alert("Kırpma işlemi sırasında hata oluştu: " + e);
-    }
+    } catch (e) {}
 
-    // 4️⃣ Rectangle 1’e oturmuş deseni kopyalayıp Rectangle 1 Copy’e yapıştır
+    // 4️⃣ Rectangle 1 Copy için kopyala
     var pastedLayer2 = pastedLayer1.duplicate();
-    var rect1Copy = doc.artLayers.getByName("Rectangle 1 copy");
-
     pastedLayer2.translate(rect1Copy.bounds[0] - pastedLayer2.bounds[0], rect1Copy.bounds[1] - pastedLayer2.bounds[1]);
 
-    // 5️⃣ Barkod güncelleme (10 adet)
+    // 5️⃣ BARKOD1 ~ BARKOD10
     for (var i = 1; i <= 10; i++) {
         try {
-            var barkodLayer = doc.artLayers.getByName("BARKOD " + i);
+            var barkodLayer = doc.artLayers.getByName("BARKOD" + i);
             barkodLayer.textItem.contents = barcodeText;
-        } catch (e) {
-            continue;
-        }
+        } catch (e) {}
     }
 
-    // 6️⃣ Katmanları en alta taşı
+    // 6️⃣ En alta taşı
     pastedLayer1.move(doc.artLayers[doc.artLayers.length - 1], ElementPlacement.PLACEAFTER);
     pastedLayer2.move(doc.artLayers[doc.artLayers.length - 1], ElementPlacement.PLACEAFTER);
 
-} else if (bedenType === "135 x 135" || bedenType === "150 x 150") {
+} else {
+    // Rectangle 1'e göre resize ve ortalama işlemi (bütün diğer bedenler için)
     var rect1 = doc.artLayers.getByName("Rectangle 1");
 
-    // 1️⃣ Genişliği Rectangle 1 ile eşitle
-    var scaleFactor = ((rect1.bounds[2] - rect1.bounds[0]) / pastedLayer1.bounds[2]) * 100;
-    pastedLayer1.resize(scaleFactor, scaleFactor);
+    // Oran koruyarak en-boy oranı ile resize
+    var targetW = rect1.bounds[2] - rect1.bounds[0];
+    var targetH = rect1.bounds[3] - rect1.bounds[1];
+    var layerW = pastedLayer1.bounds[2] - pastedLayer1.bounds[0];
+    var layerH = pastedLayer1.bounds[3] - pastedLayer1.bounds[1];
 
-    // 2️⃣ Ortala
-    var centerX = (doc.width - pastedLayer1.bounds[2] + pastedLayer1.bounds[0]) / 2;
-    var centerY = (doc.height - pastedLayer1.bounds[3] + pastedLayer1.bounds[1]) / 2;
-    pastedLayer1.translate(centerX - pastedLayer1.bounds[0], centerY - pastedLayer1.bounds[1]);
+    var ratioW = targetW / layerW;
+    var ratioH = targetH / layerH;
+    var finalRatio = Math.max(ratioW, ratioH); // fazlalık kalacak ama crop ile kesilecek
 
-    // 3️⃣ Yukarı ve aşağı taşan kısımları kırp
+    pastedLayer1.resize(finalRatio * 100, finalRatio * 100);
+
+    // Ortala
+    var centerX = (rect1.bounds[0] + rect1.bounds[2]) / 2 - (pastedLayer1.bounds[0] + pastedLayer1.bounds[2]) / 2;
+    var centerY = (rect1.bounds[1] + rect1.bounds[3]) / 2 - (pastedLayer1.bounds[1] + pastedLayer1.bounds[3]) / 2;
+    pastedLayer1.translate(centerX, centerY);
+
+    // Kırpma (yukarı ve aşağı)
     try {
         var cropBounds = doc.artBounds;
-        if (cropBounds && cropBounds.length === 4) {
+        if (cropBounds.length === 4) {
             doc.crop([0, cropBounds[1], doc.width, cropBounds[3]]);
         }
-    } catch (e) {
-        alert("Kırpma işlemi sırasında hata oluştu: " + e);
-    }
+    } catch (e) {}
 
-    // Barkod güncelleme (4 adet)
+    // Barkod işlemi (135x135, 150x150 ve diğerleri): BARKOD1~BARKOD4
     for (var i = 1; i <= 4; i++) {
         try {
-            var barkodLayer = doc.artLayers.getByName("BARKOD " + i);
+            var barkodLayer = doc.artLayers.getByName("BARKOD" + i);
             barkodLayer.textItem.contents = barcodeText;
-        } catch (e) {
-            continue;
-        }
+        } catch (e) {}
     }
 
-    // Katmanı en alta taşı
-    pastedLayer1.move(doc.artLayers[doc.artLayers.length - 1], ElementPlacement.PLACEAFTER);
-
-} else {
-    // 1️⃣ Katmanı ortala (Align işlemi yerine manuel hesap)
-    var centerX = (doc.width - pastedLayer1.bounds[2] + pastedLayer1.bounds[0]) / 2;
-    var centerY = (doc.height - pastedLayer1.bounds[3] + pastedLayer1.bounds[1]) / 2;
-    pastedLayer1.translate(centerX - pastedLayer1.bounds[0], centerY - pastedLayer1.bounds[1]);
-
-    // 2️⃣ Kırpma işlemi (crop için alternatif kullanım)
-    try {
-        var cropBounds = doc.artBounds;
-        if (cropBounds && cropBounds.length === 4) {
-            doc.crop([cropBounds[0], cropBounds[1], cropBounds[2], cropBounds[3]]);
-        }
-    } catch (e) {
-        // Hata olursa kırpma işlemini atla, ama hata mesajı gösterme
-    }
-
-    // Barkod güncelleme (4 adet)
-    for (var i = 1; i <= 4; i++) {
-        try {
-            var barkodLayer = doc.artLayers.getByName("BARKOD " + i);
-            barkodLayer.textItem.contents = barcodeText;
-        } catch (e) {
-            continue;
-        }
-    }
-
-    // Katmanı en alta taşı
+    // En alta taşı
     pastedLayer1.move(doc.artLayers[doc.artLayers.length - 1], ElementPlacement.PLACEAFTER);
 }
 
-// 4. Dosyaları kaydet
+// 4. JPEG olarak kaydet
 var jpegSaveFile = File(outputFolder + "/" + barcodeText + ".jpg");
 var jpegOptions = new JPEGSaveOptions();
 jpegOptions.quality = 12;
 doc.saveAs(jpegSaveFile, jpegOptions, true);
 
-// TIFF dosyasını kapat
+// 5. Kapat
 doc.close(SaveOptions.DONOTSAVECHANGES);

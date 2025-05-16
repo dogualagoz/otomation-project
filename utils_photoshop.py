@@ -25,6 +25,8 @@ def process_image_with_photoshop(tiff_file, image_file, output_folder, barcode_t
 
     # Komutu çalıştır
     try:
+
+        
         subprocess.run(apple_script, shell=True, check=True)
         return True
     except subprocess.CalledProcessError:
